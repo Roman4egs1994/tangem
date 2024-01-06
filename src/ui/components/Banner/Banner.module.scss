@@ -1,0 +1,56 @@
+.wrapper {
+  width: 100%;
+  height: 54px;
+  background-color: black;
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+
+  .imageBlock {
+    margin-left: 40px;
+    @media (max-width: 989.9px) {
+      margin-left: 0;
+    };
+  }
+
+  .textBanner {
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    justify-content: center;
+
+    .textNone {
+      @media (max-width: 834.9px) {
+        display: none;
+      }
+    }
+
+    .circle {
+      margin: 0 12px;
+    }
+
+    .yellowText {
+      color: #D7A830;
+      letter-spacing: -0.04em;
+    }
+
+    .yellowTextNoLetterS {
+      color: #D7A830;
+    }
+  }
+
+  .bannerTriggers {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-right: 20px;
+    height: 54px;
+
+    .btnClose {
+      @media (max-width: 834.9px) {
+        display: none;
+      }
+    }
+  }
+}
+

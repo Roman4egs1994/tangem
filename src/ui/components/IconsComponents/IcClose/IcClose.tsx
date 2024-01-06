@@ -1,7 +1,7 @@
 import {IconProps, IconWrapper} from "@/ui/components/IconsComponents/IconWrapper";
 
 
-export const IcClear = (allProps: IconProps) => {
+export const IcClose = (allProps: IconProps) => {
         const { svgProps: props, ...restProps } = allProps
 
         return (

@@ -14,7 +14,7 @@ export type ButtonIconProps = {
 
 export const IconButton = forwardRef<HTMLButtonElement, ButtonIconProps>((props, ref) => {
 
-        const {asChild, children, className, variant, ...rest} = props
+        const {asChild, children, className, variant = 'tangem', ...rest} = props
 
         const iconButtonClasses = {
             button: clsx(
