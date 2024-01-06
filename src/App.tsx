@@ -1,9 +1,8 @@
-import {Layout} from "@/ui/components/Layout/Layout";
+import {Layout} from "@/ui/components/Layout";
 
 export function App() {
     return (
         <Layout>
-
         </Layout>
     )
 }
