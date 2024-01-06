@@ -1,3 +1,9 @@
+import {Layout} from "@/ui/components/Layout/Layout";
+
 export function App() {
-    return <div>Hello</div>
+    return (
+        <Layout>
+
+        </Layout>
+    )
 }
