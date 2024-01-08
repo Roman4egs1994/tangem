@@ -1,19 +1,44 @@
 .wrapper {
-  width: 100%;
+  padding: 0 40px;
   height: 54px;
   background-color: black;
   display: flex;
   justify-content: space-between;
   gap: 10px;
 
+  &.moved {
+    transform: translateX(-165px);
+    height: 54px;
+    padding: 0 40px;
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+  }
+
+  @media (max-width: 569px) {
+    overflow: hidden;
+  }
+  @media (max-width: 996.9px) {
+    padding: 0 20px 0 0;
+  }
+
   .imageBlock {
-    margin-left: 40px;
-    @media (max-width: 989.9px) {
-      margin-left: 0;
-    };
+    overflow: hidden;
+    @media (max-width: 569px) {
+      display: contents;
+    }
+    @media (max-width: 761.9px) {
+      overflow: inherit;
+    }
+
+    .image {
+    }
   }
 
   .textBanner {
+    background-color: black;
+    height: 54px;
     display: flex;
     align-items: center;
     white-space: nowrap;
@@ -25,17 +50,53 @@
       }
     }
 
+    .comma {
+      display: none;
+      @media (max-width: 719.9px) {
+        display: block;
+      }
+    }
+
     .circle {
       margin: 0 12px;
+      @media (max-width: 761.9px) {
+        display: none;
+      }
+    }
+
+    .mobileVer {
+      @media (max-width: 761.9px) {
+        display: none;
+      }
     }
 
     .yellowText {
       color: #D7A830;
       letter-spacing: -0.04em;
+      @media (max-width: 719.9px) {
+        margin-right: 20px;
+      }
+    }
+
+    .blockTrigger {
+      display: none;
+      @media (max-width: 560px) {
+        display: flex;
+        margin-right: 165px;
+        justify-content: center;
+      }
+      @media (max-width: 480px) {
+        display: flex;
+        width: 165px;
+        justify-content: left;
+      }
     }
 
     .yellowTextNoLetterS {
       color: #D7A830;
+      @media (max-width: 761.9px) {
+        display: none;
+      }
     }
   }
 
@@ -43,14 +104,14 @@
     display: flex;
     align-items: center;
     gap: 14px;
-    margin-right: 20px;
-    height: 54px;
 
-    .btnClose {
-      @media (max-width: 834.9px) {
-        display: none;
+    .triggerNext {
+      display: none;
+      @media (max-width: 480px) {
+        transform: rotate(180deg);
+        display: inline-flex;
       }
+
     }
   }
 }
-

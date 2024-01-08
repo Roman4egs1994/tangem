@@ -14,7 +14,7 @@ export type ButtonProps = {
 } & ComponentPropsWithoutRef<'button'>
 
 export const Button = forwardRef<HTMLButtonElement, ButtonProps>((props, ref) => {
-  const { asChild, children, className, fullWidth, variant = 'tangem', ...rest } = props
+  const { asChild, children, className, fullWidth, variant , ...rest } = props
 
   const isLink = asChild && variant === 'link'
   const classNames = clsx(

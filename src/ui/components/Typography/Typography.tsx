@@ -20,6 +20,7 @@ export type VariantType =
     | 'Subtitle2'
     | 'Tangem'
     | 'Tangem1'
+    | 'Tangem2'
 
 export type TypographyProps = {
     asChild?: boolean
@@ -56,6 +57,8 @@ function getComponent(variant: VariantType) {
             return 'span'
         case 'Tangem1':
             return 'span'
+        case 'Tangem2':
+            return 'h2'
         default:
             return 'p'
     }

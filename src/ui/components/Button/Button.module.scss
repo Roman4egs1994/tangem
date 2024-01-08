@@ -1,13 +1,9 @@
 .button {
   all: unset;
-
   cursor: pointer;
-
   display: flex;
-  gap: 10px;
   align-items: center;
   justify-content: center;
-
   width: 115px;
   height: 36px;
 
@@ -20,7 +16,6 @@
   color: var(--color-light-100);
   text-align: center;
   border-radius: 100px;
-
 
   transition: 0.1s ease-out;
 
@@ -40,6 +35,9 @@
   background-clip: text, border-box;
   background-size: 100% 100%;
   color: transparent;
+}
+.tandem1{
+
 }
 
 .primary {

@@ -8,13 +8,14 @@ type Props = ComponentPropsWithoutRef<'div'> & {
 }
 export const Layout = forwardRef<ElementRef<'div'>, Props>(({className, children, ...rest}, ref) => {
         const classNames = {
-            main: clsx(s.main)
+            main: clsx(s.main),
+            layout: clsx(s.layout),
         }
         return (
-            <div ref={ref} {...rest}>
-                {/*There should be a HEADER here*/}
-                <main className={classNames.main}>{children}</main>
-            </div>
+                <div className={classNames.layout} ref={ref} {...rest}>
+                    {/*There should be a HEADER here*/}
+                    <main className={classNames.main}>{children}</main>
+                </div>
         )
     }
 )
