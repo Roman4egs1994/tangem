@@ -33,12 +33,11 @@
   background: linear-gradient(to right, rgba(255, 255, 255, 1), rgba(11, 11, 11, 1)),
   var(--color-light-100);
   background-clip: text, border-box;
-  background-size: 100% 100%;
   color: transparent;
+  background-size: 100% 100%;
+  background-color: white;
 }
-.tandem1{
 
-}
 
 .primary {
   background-color: var(--color-accent-500);
@@ -123,4 +122,13 @@
 
 .fullWidth {
   width: 100%;
+}
+
+
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  .tangem {
+    //z-index: 99;
+    //background-clip: text;
+    //-webkit-background-clip: text;
+  }
 }

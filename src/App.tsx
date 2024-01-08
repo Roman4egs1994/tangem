@@ -10,9 +10,8 @@ export function App() {
     const [openBanner, setOpenBanner] = useState(true)
     const [openCard, setOpenCard] = useState(false)
     const getItemOpenCardInLocalStorage = getMeaningInLocalStorage('openDiscountCard',)
-
     useEffect(() => {
-        if (!getItemOpenCardInLocalStorage) {
+        if (!getItemOpenCardInLocalStorage && getItemOpenCardInLocalStorage !== '') {
             return
         }
         const checkScroll = () => {

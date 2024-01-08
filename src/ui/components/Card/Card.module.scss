@@ -20,6 +20,9 @@
     height: 294px;
     right: 65px;
     top: 52px;
+    @media (max-width: 399.9px) {
+      right: 116px;
+    }
     .btnCloseBlock{
       width: 100%;
       display: flex;

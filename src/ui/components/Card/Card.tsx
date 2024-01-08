@@ -50,9 +50,6 @@ export const Card = forwardRef<HTMLDivElement, CardPropsType>((props, ref) => {
                     <Typography variant={"Tangem2"}>
                         Black Friday
                     </Typography>
-                    {/*<Typography asChild className={classNames.discountText}>*/}
-                    {/*    <h3>10%OFF</h3>*/}
-                    {/*</Typography>*/}
                     <div className={classNames.discountText}>
                         10%OFF
                     </div>

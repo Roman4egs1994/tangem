@@ -1,21 +1,20 @@
-import {ComponentPropsWithoutRef, CSSProperties, ElementRef, forwardRef} from 'react'
-import {clsx} from "clsx";
+import {ComponentPropsWithoutRef, CSSProperties} from 'react'
+import clsx from "clsx";
 
 import s from './Layout.module.scss'
 
-type Props = ComponentPropsWithoutRef<'div'> & {
+type LayoutProps = ComponentPropsWithoutRef<'div'> & {
     contentMarginTop?: CSSProperties['marginTop']
 }
-export const Layout = forwardRef<ElementRef<'div'>, Props>(({className, children, ...rest}, ref) => {
-        const classNames = {
-            main: clsx(s.main),
-            layout: clsx(s.layout),
-        }
-        return (
-                <div className={classNames.layout} ref={ref} {...rest}>
-                    {/*There should be a HEADER here*/}
-                    <main className={classNames.main}>{children}</main>
-                </div>
-        )
+export const Layout = ({className, children, ...rest}: LayoutProps) => {
+    const classNames = {
+        main: clsx(s.main, className),
+        layout: clsx( className),
     }
-)
+    return (
+        <div {...rest}>
+            {/*There should be a HEADER here*/}
+            <main className={classNames.main}>{children}</main>
+        </div>
+    )
+}

@@ -59,50 +59,52 @@ export const Banner = forwardRef<HTMLDivElement, BannerProps>((props, ref) => {
 
     return (
         <>
-            {open &&
-                    <div ref={startWrapper} className={classNames.wrapper} >
-                        <div  className={classNames.imageBlock}>
-                            <img className={classNames.image} src={imgPresent} alt="image banner"/>
-                        </div>
-                        <div className={classNames.textBanner}>
-                            <Typography variant={'Tangem'} asChild>
-                                <span>Black Friday</span>
-                            </Typography>{"\u00A0"}
-                            <Typography variant={'Tangem'} asChild>
-                                <span className={classNames.comma}>,</span>
-                            </Typography>{"\u00A0"}
-                            <Typography className={classNames.textNone} variant={'Tangem1'} asChild>
-                                <span>, 24-27 Nov</span>
-                            </Typography>
-                            <SeparatorCircle className={classNames.circle}/>
-                            <Typography className={classNames.yellowText} variant={'Tangem'} asChild>
-                                <span>10%OFF</span>
-                            </Typography>
-                            <div className={classNames.blockTrigger}>
-                                <IconButton className={classNames.triggerNext} onClick={onclickFocusToEndWrapper}>
-                                    <IcNext color={'rgba(217, 217, 217, 0.4)'} size={1.5}/>
-                                </IconButton>
-                            </div>
-                            <SeparatorCircle className={classNames.circle}/>
-                            <Typography className={classNames.mobileVer} variant={'Tangem1'} asChild>
-                                <span>Use code</span>
-                            </Typography>{"\u00A0"}
-                            <Typography className={classNames.yellowTextNoLetterS} variant={'Tangem'} asChild>
-                                <span>10FRIDAY</span>
-                            </Typography>{"\u00A0"}
-                            <Typography className={classNames.textNone} variant={'Tangem1'} asChild>
-                                <span>at checkout</span>
-                            </Typography>{"\u00A0"}
-                        </div>
-                        <div className={classNames.bannerTriggers}>
-                            <IconButton className={classNames.triggerNext} onClick={onclickFocusToStartWrapper}>
+            {open && <div ref={ref} className={s.banner}>
+                <div ref={startWrapper} className={classNames.wrapper} >
+                    <div  className={classNames.imageBlock}>
+                        <img src={imgPresent} alt="image banner"/>
+                    </div>
+                    <div className={classNames.textBanner}>
+                        <Typography variant={'Tangem'} asChild>
+                            <span>Black Friday</span>
+                        </Typography>{"\u00A0"}
+                        <Typography variant={'Tangem'} asChild>
+                            <span className={classNames.comma}>,</span>
+                        </Typography>{"\u00A0"}
+                        <Typography className={classNames.textNone} variant={'Tangem1'} asChild>
+                            <span>, 24-27 Nov</span>
+                        </Typography>
+                        <SeparatorCircle className={classNames.circle}/>
+                        <Typography className={classNames.yellowText} variant={'Tangem'} asChild>
+                            <span>10%OFF</span>
+                        </Typography>
+                        <div className={classNames.blockTrigger}>
+                            <IconButton className={classNames.triggerNext} onClick={onclickFocusToEndWrapper}>
                                 <IcNext color={'rgba(217, 217, 217, 0.4)'} size={1.5}/>
                             </IconButton>
-                            <Button  variant={'tangem'} onClick={onClickHandlerConfirm}>Shop now</Button>
-                            <IconButton ref={endOfWrapper} className={classNames.btnClose} onClick={onClickCloseHandler}><IcClose
-                                size={1.5}/></IconButton>
                         </div>
+                        <SeparatorCircle className={classNames.circle}/>
+                        <Typography className={classNames.mobileVer} variant={'Tangem1'} asChild>
+                            <span>Use code</span>
+                        </Typography>{"\u00A0"}
+                        <Typography className={classNames.yellowTextNoLetterS} variant={'Tangem'} asChild>
+                            <span>10FRIDAY</span>
+                        </Typography>{"\u00A0"}
+                        <Typography className={classNames.textNone} variant={'Tangem1'} asChild>
+                            <span>at checkout</span>
+                        </Typography>{"\u00A0"}
                     </div>
+                    <div className={classNames.bannerTriggers}>
+                        <IconButton className={classNames.triggerNext} onClick={onclickFocusToStartWrapper}>
+                            <IcNext color={'rgba(217, 217, 217, 0.4)'} size={1.5}/>
+                        </IconButton>
+                        <Button  variant={'tangem'} onClick={onClickHandlerConfirm}>Shop now</Button>
+                        <IconButton ref={endOfWrapper} className={classNames.btnClose} onClick={onClickCloseHandler}><IcClose
+                            size={1.5}/></IconButton>
+                    </div>
+                </div>
+            </div>
+
             }
         </>
     );
